@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log("destucturing Object");
+        let obj={name:"geet",city:"goa",age:23,mob:5888};
+        let{city,mob=999,...name}=obj;
+        console.log(city)
+        console.log(name)
+        console.log(mob)
+    </script>
+</body>
+</html>

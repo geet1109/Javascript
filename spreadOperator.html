@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log("Spread Operator")
+        arr=["apple","fruits","mango","orange"];
+       
+        function test(...para){ //rest parameters
+            console.log(para);
+        }
+        test(arr);
+        test(...arr); //spread operator
+
+        let ar1=["apple","fruits","mango","orange"];
+        let ar2=[...ar1,"1","2"];     //spread operator
+        console.log(ar2);
+
+        console.log(2**3); //exponential operator
+    </script>
+</body>
+</html>

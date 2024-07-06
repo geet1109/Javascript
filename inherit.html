@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- Write a JavaScript program to create a class called "Person" with properties 
+    for name, age and country. Include a method to display the person's details. 
+    Create two instances of the 'Person' class and display their details. -->
+<body>
+    <script>
+        class Person{
+            constructor(name,age,country) {
+                this.name =name;
+                this.age =age;
+                this.country =country;
+            }
+            display(){
+                console.log("Name: "+this.name+" Age: "+this.age+" Country: "+this.country);
+            }
+        }
+        const obj=new Person('geet',23,'india');
+        const obj2=new Person('ram',12,'india');
+
+        obj.display();
+        obj2.display();
+    </script>
+</body>
+</html>

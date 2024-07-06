@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //create Date object
+        const mydate=new Date();
+        //print mydate
+        console.log(mydate);
+        //find year of the date
+        const year=mydate.getFullYear();
+        //print year
+        console.log(year);
+        //set month
+        mydate.setMonth(6); //6th month is june but it sets july, it starts from 0
+        //set date 
+        mydate.setDate(12);// set date to 12th date 
+        //print date
+        console.log(mydate)
+        //set date according to me
+        mydate.setDate(mydate.getDate()+7);
+        console.log(mydate);
+    
+        //compares the Date object myDate to the Date object otherDate
+        const otherDate=new Date();
+        console.log("My Date is "+mydate);
+        console.log("Other Date is "+otherDate);
+        const isEqual=mydate.getTime()===otherDate.getTime();
+        console.log("IsEqual is "+isEqual);
+
+        //format the date
+        console.log("Without Format Date is "+mydate);
+        const formattedDate=mydate.toLocaleString();
+        console.log("FormattedDate use of LocaleString  "+formattedDate);
+        const formatDate=mydate.toLocaleDateString();
+        console.log("FormattedDate use of LocaleDateString  "+formatDate);
+        const formtDate=mydate.toLocaleTimeString();
+        console.log("FormattedDate use of LocaleTimeString  "+formtDate);
+        
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function countLetter(name){
+            let letter=0;
+            for(let i=0;i<name.length;i++){
+                if(name[i]!=' '){
+                    letter++;
+                }
+            }
+            return letter;
+        }
+        console.log(countLetter("hello world!"));
+
+        function firstchar(name){
+            let count;
+            for(let i=0;i<name.length;i++){
+                count=0;
+                for(let j=0;j<name.length;j++){
+                        if(name[i]==name[j]){
+                            count++;
+                        }
+                }
+                if(count==1)
+                    return name[i];
+            }
+            if(count>1){
+                return "repeat";
+            }
+           
+        }
+        console.log(firstchar("rogramming"));
+        console.log(firstchar("appa"));
+    </script>
+</body>
+</html>

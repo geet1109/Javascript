@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Write a JavaScript function that takes an array of numbers and returns a new array with only the even numbers. 
+ -->
+    <script>
+        let newArr=[];
+        count=0;
+        function EvenArr(arr){
+            for(let i=0;i<arr.length-1;i++){
+            if(arr[i]%2==0){
+              newArr[count]=arr[i];
+              count++;
+            }
+        }
+        }
+        let arr=[45,52,56,74,41,13,56,59,20,21,36,57]
+        EvenArr(arr);
+        console.log(newArr)
+    </script>
+    </body>
+</html>,

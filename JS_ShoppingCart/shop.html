@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // https://jsonplaceholder.typicode.com/users
+        async function callAPI(){
+            let result=await fetch('https://dummyjson.com/products')
+            console.log(result)
+            result=await result.json()
+            console.log(result)
+            document.getElementById('div').innerHTML=result.products.map((item)=>
+                `<label> ${item.description}</label>`
+            ).join("")
+            console.log(result)
+        }
+        callAPI()   
+    </script>
+</head>
+<body>
+    <h1>Rest API Call and Display data</h1>
+    <table border="1">
+        <thead>
+            <th>Id</th>
+            <th>Title</th>
+            <th>description</th>
+            <th>Price</th>
+        </thead>
+
+        <tbody id="products">
+
+        </tbody>
+        <div id="div"></div>
+    </table>
+</body>
+</html>

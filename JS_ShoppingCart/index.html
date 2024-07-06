@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <script> 
+        async function callAPI(){
+            let result=await fetch('https://dummyjson.com/products')
+            console.log(result)
+            result=await result.json()
+            console.log(result)
+            
+            document.getElementById('contentdiv').innerHTML=result.products.map((item)=>
+            
+            `<div id="content">
+                <img src="${item.images[1]}">
+                <label class="name" class="name"> ${item.title}</label>
+                <label class="price">${item.price}</label>
+                <button>Add to Cart</button>
+            </div>`
+            ).join("")
+            console.log(result)
+        }
+        callAPI()   
+    </script>
+</head>
+
+<body>
+    <header>
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Cart</a></li>
+        </ul>
+    </header>
+    <section>
+        <div class="top">
+            <h1>Your Shopping Cart</h1>
+            <div class="cart"></div>
+        </div>
+        <div id="contentdiv">
+          
+        </div>
+    </section>
+</body>
+
+</html>

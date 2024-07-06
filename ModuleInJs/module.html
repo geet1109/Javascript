@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <h1>Module</h1>
+    <script type="module" defer>
+        import module,{WithoutDefault as withoutdefault, ImClass,variable,obj1} from './module.js';
+        module();
+        console.log(module())
+
+        WithoutDefault();           
+        {/*  In import statement use curly bracket for which function, class is defined without default keyword*/}
+          
+        function WithoutDefault(){                                  //Now this gives error, To call this function   
+            console.log("I am function inside the module.html same as module.js")   //in import statement
+        }          
+       
+        withoutdefault(); 
+
+        console.log(variable);
+
+        let obj= new ImClass();
+        obj.classFunc();
+
+        obj1.classFunc();
+    </script>
+</body>
+</html>

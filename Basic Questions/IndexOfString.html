@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function index(arr,str){
+            console.log("Original Array is ", arr)
+            console.log("Index of ",str," is ")
+            for(let i=0;i<arr.length;i++){
+                if(arr[i]==str){
+                    return i;
+                }
+            }
+        }
+        console.log(index(["geet","anjali","mona","deep"],"mona"))
+    </script>
+</body>
+</html>

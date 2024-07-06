@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Destructuring Array</h1>
+    <script>
+         console.log("Destructuring Array");
+         let fruits=["apple","mango","kiwi","banana"];
+         let [fruit1,fruit2]=fruits;
+         console.log(fruit1,fruit2);
+
+         //Suppose Now i don't want to access the second element
+         //I only want to access the 1st and 3rd element
+         //then
+         let[item1,,item2]=fruits;   //blank comma for second element
+         console.log(item1,item2);
+
+         //Now I want to pass all elements, I want to pass 2 elements and it acess all other elements
+         let[it1,...it2]=fruits;
+         console.log(it1,...it2)
+
+         //Now suppose I access element 5 and array only have 4 elements, then what we can do
+         let[fru1,fru2,fru3,fru4,fru5]=fruits;
+         console.log(fru5);  //It will print undefined
+         
+         //we can pass default value in fru5
+         let[fr1,fr2,fr3,fr4,fr5="defaultValue"]=fruits;
+         console.log(fr5);
+    </script>
+</body>
+</html>

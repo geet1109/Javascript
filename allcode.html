@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // ----------------------------------------------------------------------------
+        //Js is a dynamically typed language
+        let a = 9;
+        console.log("Type of a is: ", typeof (a), " value of a is: ", a)
+        a = "Geet";
+        console.log("Type of a is: ", typeof (a), " value of a is: ", a)
+
+        // ----------------------------------------------------------------------------
+        //Hoisting  
+        // console.log(x)
+        // let x=9;
+
+        // --------------------------------------------------------------------------------
+        //higher Order function
+        function high(func, a, b) {
+            return func(a, b)
+        }
+        function add(a, b) {
+            return a + b;
+        }
+        console.log(high(add, 13, 23))
+
+        // ----------------------------------------------------------------------------
+        //closure
+        function outer() {
+            let a = 9;
+            function inner() {
+                console.log("closure example ", a)
+            }
+            inner()
+        }
+        outer()
+
+        // ----------------------------------------------------------------------------
+        //callback
+        function func(a, b) {
+            fun(a, b)
+        }
+        function fun(a, b) {
+            console.log(a + b)
+        }
+        func(fun, 20, 30)
+
+        // ----------------------------------------------------------------------------
+        //promise
+        let i = 80;
+        let j = 45;
+        let data = new Promise((resolve, reject) => {
+            if (i > j) {
+                resolve("resolved")
+            } else {
+                reject("rejected")
+            }
+        })
+        data.then((result) => {
+            console.log(result);
+        })
+
+        // ----------------------------------------------------------------------------
+        //object destructing
+        let obj = {
+            name: 'geet',
+            age: 80,
+            city: 'delhi'
+        }
+        let { age, name } = obj
+        console.log("object destructing: ", age, name)
+
+        // ----------------------------------------------------------------------------
+        //Iterate array
+        let arr = [1, 3, 4, 2, 4]
+        for (let i = 0; i < arr.length; i++) {     //using for loop
+            console.log("iterate array using for loop", arr[i])
+        }
+        arr.forEach((no) => {     //using forEach Method
+            console.log("iterate array using for each method", no)
+        })
+        for (let j of arr) {          //using for Of loop
+            console.log("iterate array using for Of loop", j)
+        }
+
+        // ----------------------------------------------------------------------------
+        //Iterate Objects
+        let ob = {
+            name: 'geet',
+            city: 'delhi',
+            age: '73'
+        }
+        for (let data in ob) {    //using for in loop
+            console.log("Iterate Objects using for In Loop", data, ob[data])
+        }
+        Object.keys(ob).forEach((n) => {
+            console.log("Iterate object using Object.keys with for each method", n, ob[n])
+        })
+        Object.entries(ob).forEach((i) => {
+            console.log("Iterate object using Object.Entries with for each method", i)
+        })
+
+        // ----------------------------------------------------------------------------
+        //call by value
+        let myname = "geet"
+        let temp = myname
+        temp = "Muskan"
+        console.log(temp, myname)
+
+        // ----------------------------------------------------------------------------
+        //call by refrence
+        let obj1 = {
+            name: "geet",
+            age: 65
+        }
+        let obj2 = obj1
+        obj1.name = "Muskan"
+        console.log(obj1.name, obj2.name)
+
+        // ----------------------------------------------------------------------------
+        // shallow copy and deep copy
+        let original = {
+            name: "geet",
+            age: 65
+        }
+        // const shallowCopy=original
+        const shallowCopy = Object.assign({}, original)
+
+        shallowCopy.name = "Muskan"
+        console.log("Original: ", original)
+        console.log("shallow copy: ", shallowCopy)
+
+        // ----------------------------------------------------------------------------
+        //create a promise which resolve in 2 second
+        function waitForTwoSeconds() {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve("Promise resolved after 2 seconds");
+                }, 2000);
+            });
+        }
+        waitForTwoSeconds().then(result => {
+            console.log(result); // Output: Promise resolved after 2 seconds
+        }).catch(error => {
+            console.error(error);
+        });
+
+        // ----------------------------------------------------------------------------
+        // create a function which print hello world in each interval of 1 second for 3times
+        function printHelloWorld() {
+            let count = 0;
+            const interval = setInterval(function () {
+                console.log("Hello, world!");
+                count++;
+                if (count >= 3) {
+                    clearInterval(interval);
+                }
+            }, 1000);
+        }
+
+        printHelloWorld();
+
+        //isi ko async await me kro
+    </script>
+</body>
+</htm

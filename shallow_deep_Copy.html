@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let obj={
+            name:"geet"
+        };
+        let user=obj;
+        user.name="Geetanjali";
+        console.log("obj ",obj);   //obj also shows Geetanjali
+        console.log("user: ",user);
+
+        //to resolve this problem we use shallow and deep copy
+        //first method
+        let address={
+            city:"delhi"
+        }
+        let add={...address};
+        add.city="Goa";
+        console.log("address ",address);   
+        console.log("add: ",add);
+
+        //second method
+        let state={
+            city:"Mumbai"
+        }
+        let st=Object.assign({},state)
+        st.city="Udaipur";
+        console.log("state: ",state);   
+        console.log("st: ",st);
+
+        //shallow copy works at only initial level but it doesn't work when we fetch value of Object inside object
+        //to resolve this problem, we use deep copy
+        let obj1={
+            name:"geet",
+            address:{
+                state:"goa"
+            },
+            getdata:function(){     
+                return "all is well";
+            }
+        };
+        // let user1={...obj1};                 //this will not work here
+        let user1=JSON.parse(JSON.stringify(obj1));             //in this we converted into string
+        //this method works, but it not works for function, it not copied the function into user1
+        // to resolve this problem, we use lodash, cdn link  copy
+        // then use 
+        //let user1=_.cloneDeep(obj1);  // I didn't try but this is the method
+        user1.address.state="Delhi";
+        console.log("obj1 ",obj1);   
+        console.log("user1: ",user1);
+        
+
+    </script>
+</body>
+</html>

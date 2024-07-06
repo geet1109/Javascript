@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //  Write a function that sorts an array of numbers in ascending order. 
+        function sort(...arr){
+            for(let i=0;i<arr.length;i++){
+                for(let j=i+1;j<arr.length;j++){
+                    if(arr[i]>arr[j]){
+                        let k=arr[j]
+                        arr[j]=arr[i]
+                        arr[i]=k;
+                    }
+                }
+            }
+            return arr;
+        }
+        console.log(sort(11,4,32,65,23,10,56))
+    </script>
+</body>
+</html>

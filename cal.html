@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const students = [
+            { name: 'geet', scores: [40, 23, 89] },
+            { name: 'anshu', scores: [87, 43, 76] },
+            { name: 'raman', scores: [24, 65, 76] }
+        ];
+        function retrieveStudent(Name, callback) {
+            setTimeout(() => {
+                const st = students.find(st => st.name ==Name);
+                callback(st);
+            }, 1000); 
+        }
+        function processScores(score, callback) {
+            setTimeout(() => {
+                
+            }, 2000); 
+        }
+        function filter(con, callback) {
+            setTimeout(() => {
+                
+            }, 1000); 
+        }
+        const Name = 'geet';
+        const threshold = 23;
+        retrieveStudent(studentName, (error, student) => {
+        
+        });
+    </script>
+</body>
+</html>

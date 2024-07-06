@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Marksheet</h1>
+    <p>
+        <h3> English</h3>  <h3 id="eng"></h3>
+
+    </p>
+    <table border="1">
+        <thead>
+            <tr> 
+                <td>Name</td>
+                <td>Hindi</td>
+                <td> English</td>
+                <td>Maths</td>
+                <td>Total</td>
+                <td>Average</td>
+            </tr>
+           
+        </thead>
+        <tbody>
+            <tr>
+                <td> Geetanjali</td>
+                 <td id="hin1"> </td>
+                 <td id="eng1">  </td>
+                 <td id="mat1"></td>
+                 <td id="total1"></td>
+                 <td id="avg1"></td>
+             </tr>
+             <tr>
+                <td> Tarandeep</td>
+                 <td id="hin2"> </td>
+                 <td id="eng2">  </td>
+                 <td id="mat2"></td>
+                 <td id="total2"></td>
+                 <td id="avg2"></td>
+             </tr>
+            
+        </tbody>
+    </table>
+   
+    <script>
+        let a=15
+        let b=23
+        let c=54
+        let d=67
+        let e=76
+        let f=54
+        document.getElementById("hin1").innerHTML=a;
+        document.getElementById("eng1").innerHTML=b;
+        document.getElementById("mat1").innerHTML=c;
+        document.getElementById("hin2").innerHTML=d;
+        document.getElementById("eng2").innerHTML=e;
+        document.getElementById("mat2").innerHTML=f;
+        let res=a+b+c;
+        let res2=d+e+f;
+        document.getElementById("total1").innerHTML=res;
+        document.getElementById("total2").innerHTML=res2;
+        let avg1=res/3;
+        let avg2=res2/3;
+        document.getElementById("avg1").innerHTML=avg1;
+        document.getElementById("avg2").innerHTML=avg2;
+        
+    </script>
+</body>
+</html>

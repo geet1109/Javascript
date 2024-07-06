@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Generators</h1>
+    <button onclick="stepbystep()">Steps</button>
+    <script>
+        function* steps()     // to make a function as generator function, just put * after function
+        {
+            let a=10;
+            let b=20;
+            console.log(a+b);
+            yield "first step completed";     // yield used to make steps
+
+            console.log(a-b);
+            yield "second step completed";
+
+            console.log(a*b);
+            yield "third step completed";
+
+            return "all steps done";
+        }
+        let st=steps();     // make instance/object before calling the generator function 
+        function stepbystep()
+        {
+            console.log(st.next());     // next() function is used to call the generator function
+        }
+    </script>
+</body>
+</html>

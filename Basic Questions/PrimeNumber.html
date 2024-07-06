@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function isPrime(num){
+            let count=0;
+            for(let i=1;i<=num;i++){
+                if(num%i==0){
+                    count++;
+                }
+            }
+            if(count==2){
+                return "is Prime number"
+            }else{
+                return "is not Prime Number";
+            }
+        }
+        console.log("13 is ",isPrime(13));
+        console.log("12 is ",isPrime(12));
+        console.log("17 is ",isPrime(17));
+        console.log("5 is ",isPrime(5));
+        console.log("2 is ",isPrime(2));
+        console.log("62 is ",isPrime(62));x
+    </script>
+</body>
+</html>

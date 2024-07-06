@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <!-- Write a JavaScript function to check if a given string is a palindrome (reads the same forwards and backwards).  -->
+    <!-- <input type="text" onchange=""> -->
+    <!-- <button onclick="func()">Submit</button> -->
+    <script>
+       let str="madam";
+       let res="";
+       for(let i=str.length-1;i>=0;i--){
+            res=res+str[i];
+       }
+       if(str==res){
+        console.log( "Palindrome")
+       }else{
+        console.log( "not palindrome")
+       }
+    </script>
+</body>
+</html>

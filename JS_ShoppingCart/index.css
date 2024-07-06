@@ -1,0 +1,93 @@
+
+header ul{
+    /* background-color: bisque; */
+    display:  flex;
+    align-items: center;
+    justify-content: center;
+}
+header li{
+    /* background-color: lightblue; */
+    padding: 10px;
+    list-style-type: none;
+}
+header a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 800;
+}
+section{
+    /* height: 100vh; */
+    /* background-color: antiquewhite; */
+    /* padding: 10px; */
+    display:  flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.top{
+    width: 800px;
+    display: flex;
+    column-gap: 500px;
+    padding-left: 20px;
+   /* background-color: blue; */
+}
+.cart{
+    background-color: lightcoral;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    padding: 10px;
+    margin: 10px;
+}
+#contentdiv{
+    /* width: 800px; */
+    /* background-color: aqua; */
+    /* padding: 10px; */
+    display: grid;
+    grid-template-columns: 150px 150px 150px 150px 150px;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+#content{
+    /* background-color: aquamarine; */
+    background-color: antiquewhite;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+}
+img{
+    /* background-color: aquamarine; */
+    padding: 20px;
+    height: 100px;
+    border-radius: 50%;
+    /* width: 50px;
+    height: 50px; */
+}
+.name{
+    font-size: 20px;
+    margin-bottom: 10px;
+    height: 40px;
+    text-align: center;
+    /* background-color: aqua; */
+}
+.price{
+    font-size: 18px;
+    font-weight: bold;
+    height: 20px;
+   /* background-color: aqua; */
+   text-align: center;
+    margin-bottom: 10px;
+}
+#content button{
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    text-align: center;
+    width: 120px;
+    margin: auto;
+    height: 50px;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let str="";
+        // for(let i=1; i <=5;i++){
+        //     for(let j=1; j<=i;j++){
+        //         str=str+"*";
+        //     }
+        //     str=str+"\n";
+        // }
+        // console.log(str);
+
+        // let st=["beautiful", "the", "hat"];
+        let ar = [];
+        let c = 0;
+        var strr;
+        function canFind(find, st) {
+            for (let i = 0; i <= st.length - 1; i++) {
+                strr = st[i];
+                // console.log(strr);
+                for (let j = 0; j <= strr.length - 2; j++) {
+                    ar[c] = strr[j] + strr[j + 1]
+                    c++;
+                    // console.log(strr[j+1])
+                }
+            }
+            // console.log(ar);
+            let ct = 0;
+            for (let i = 0; i < find.length; i++) {
+                for (let j = 0; j < ar.length; j++) {
+                    if (find[i] == ar[j]) {
+                        ct++;
+                        break;
+                    }
+                }
+            }
+            if (ct == find.length) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        console.log(canFind(["at", "be", "th", "au"], ["beautiful", "the", "hat"]))
+        console.log(canFind(["ay", "be", "ta", "cu"], ["maybe", "beta", "abet", "course"]));
+        console.log(canFind(["th", "fo", "ma", "or"], ["the", "many", "for", "forest"]));
+    </script>
+</body>
+
+</html>

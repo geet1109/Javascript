@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Implement a function to find the sum of all the numbers in an array -->
+    <script>
+        let res=0;
+        function sum(...rst){
+            for(let i=0;i<rst.length;i++){
+                // console.log(rst[i])
+                res=res+rst[i]
+            }
+            return res; 
+        }
+       console.log(sum(1,2,3,4,5,6)) //not passed as array, because rest parameter converts nrml values into array
+    </script>
+</body>
+</html>

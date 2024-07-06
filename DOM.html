@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="cour">Courses</h1>
+    <ul id="item">
+        <li class="Hi">Apple</li>
+        <li class="Hi">Mango</li>
+        <li class="Hi">Banana</li>
+    </ul>
+    <script>
+        // var courses=document.getElementById("cour");
+        // courses.textContent="Pro Course";
+        // courses.innerText="Demo"
+        // courses.innerHTML="hii";
+        // console.log(courses);
+
+        var items=document.getElementsByClassName("Hi");
+        console.log(items[1]);
+        console.log(items[0]);
+        items[1].textContent="fruit";
+        items[2].style.fontWeight="bold";
+        items[0].style.color="red";
+
+        var query=document.querySelector('.Hi');
+        query.style.color='green';
+        query.innerText="Inner";
+        
+        var queryAll=document.querySelectorAll('.Hi');
+        queryAll[2].style.color='blue';
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="f">
+        <h1>Courses</h1>
+        <ol style="list-style-type: circle;">
+            <li> Sunday</li>
+            <li> Monday</li> 
+            <li> Tuesday</li>
+            <li> Wednesday</li> 
+            <li> Thursday</li> 
+            <li> Friday</li> 
+            <li> Saturday</li>   
+        </ol> 
+        <h2>Form.........</h2>
+    </div>
+    <form >
+        <table cellpadding="7" cellspacing="5">
+            <tr>
+                <td colspan="2"> <h3> Account Information</h3> </td>
+            </tr>
+            <tr>
+                <td> <label> <font color="blue"> Username</font></label></td>
+                <td> <input type="text" placeholder="Enter the Username"></td>
+            </tr>
+            <tr>
+                <td> <label> <font color="blue">Password</font></label></td>
+                <td> <input type="password" placeholder="Enter the password"></td>  
+            </tr>
+            <tr>
+                <td> <label><font color="blue"> Upload file</font>  </label></td>
+                <td> <input type="file">
+            </tr>
+            <tr>
+                <td colspan="2"> <h3> Contact Information</h3></td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="first"> <font color="blue"> First Name:</font> </label>
+                </td>
+                <td>  <input type="text" autofocus placeholder="Enter your first name"  required id="first"></td> 
+            </tr>
+            <tr>
+                <td>  <label> <font color="blue"> Last Name:</font> </label></td>
+                <td> <input type="text" required  placeholder="Enter your Last name"></td>
+            </tr>
+            <tr>
+                <td> <label for="email" > <font color="blue">  Email address: </font></label></td>
+                <td> <input type="email" required placeholder="Enter your email address" id="email"></td>  
+            </tr>
+            <tr>
+                <td colspan="2"><h3> Geographic Information</h3></td>
+            </tr>
+            <tr>
+                <td> <label>  <font color="blue">  Country </font> </label></td>
+                <td><input type="text" value="India" readonly></td>
+            </tr>
+             <tr>
+                <td><label>  <font color="blue"> State: </font></label> </td>
+                <td><input type="text" placeholder="two characters"></td>
+            </tr>
+            <tr>
+                <td><label>  <font color="blue"> Zip code:</font></label></td>
+                <td><input type="text" placeholder="Five digits"></td>
+            </tr>
+            <tr>
+                <td> <font color="blue"> Any Message</font> </td>
+                <td> <textarea></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><font size="6"><input type="submit"></font></td>
+            </tr>
+     
+        </table>
+    
+    </form> 
+    <script>
+        var newDiv=document.createElement("div");
+       
+        newDiv.className='divcls';
+        newDiv.id='divid';
+        var tex=document.createTextNode('Hi, Im Geetanjali Kapoor!');
+       
+        newDiv.appendChild(tex);
+        // console.log(newDiv);
+
+        var container=document.querySelector('#f');
+        var fo=document.querySelector('form');
+        console.log(newDiv);
+        container.insertBefore(newDiv,fo);
+    </script>
+</body>
+</html>

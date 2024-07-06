@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function palin(name){
+            let res="";
+            for(let i=name.length-1; i>=0; i--){
+                res=res+name[i];
+            }
+            if(name==res)
+                return "palindrome";
+            else
+                return "not palindrome";
+        }
+        console.log(palin("madam"));
+
+        function palindrome(name){
+            let len=name.length;
+            for(let i=0;i<len/2;i++){
+                if(name[i]!==name[len-1-i])
+                    return "not a palindrome"
+            }
+            return "palindrome";
+        }
+        console.log(palindrome("madame"));
+
+
+        
+
+    </script>
+</body>
+</html>

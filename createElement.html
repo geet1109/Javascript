@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="hi">
+        <h1>HEaing1</h1>
+        <ol style="list-style-type: circle;">
+            <li> Sunday</li>
+            <li> Monday</li> 
+            <li> Tuesday</li>
+            <li> Wednesday</li> 
+            <li> Thursday</li> 
+            <li> Friday</li> 
+            <li> Saturday</li>   
+        </ol> 
+    </div>
+
+    <h3 id="acc">headin2 </h3>
+    <form action="">
+        <tr>
+            <td colspan="2"> <h3> Account Information</h3> </td>
+        </tr>
+        <tr>
+            <td> <label> <font color="blue"> Username</font></label></td>
+            <td> <input type="text" placeholder="Enter the Username"></td>
+        </tr>
+        <tr>
+            <td> <label> <font color="blue">Password</font></label></td>
+            <td> <input type="password" placeholder="Enter the password"></td>  
+        </tr>
+    </form>
+    <script>
+        var newdiv=document.createElement("div");
+        newdiv.innerText="My name is geetanjali";
+        console.log(newdiv);
+
+        var con=document.querySelector('.hi');
+        var fo=document.querySelector('#acc');
+
+        con.insertBefore(newdiv,acc[1]);
+    </script>
+</body>
+</html>

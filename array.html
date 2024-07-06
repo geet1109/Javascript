@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const numbers=[1,2,3,4,5,6,7,8,9];
+        const number=[400,500];
+        let num="";
+        console.log("Originl Array "+numbers);
+        //push()
+        numbers.push(10);
+        console.log("After Push "+numbers);
+        //pop()
+        numbers.pop()
+        console.log("After pop "+numbers);
+        //shift()
+        console.log("After shift "+numbers);
+        //unshift()
+        numbers.unshift(45);
+        console.log("After Unshift "+numbers);
+        console.log( numbers.concat(number));
+        //for each 
+        numbers.forEach(
+            (i,index)=> {
+                console.log(index+" : "+i);
+            }
+        );
+
+        numbers.forEach(
+            function(n){
+                console.log("For Each 2nd Example : "+n);
+            }
+        );
+        //map
+        const sq=numbers.map(
+            (i)=>i*i
+        );
+        console.log("With help of map: "+sq);
+
+        //filter
+        const fill=numbers.filter(
+            (i)=>i%2==0
+        );
+        console.log("With help of fill "+fill);
+        //find
+        const find=numbers.find(
+            (i)=>i>5
+        );
+        console.log("With help of find "+find)
+    </script>
+</body>
+</html>

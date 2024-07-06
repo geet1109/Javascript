@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Prime Factors</h1>
+    <script>
+        let ar=[];
+        function factor(num){
+            let m=0;
+            document.write("Factors of "+num+" are: ")
+            for(i=2;i<=num;i++){
+                if(num%i==0){
+                    document.write(i+", ")
+                    ar[m]=i;
+                    m++;
+                    quo=num/i;
+                    num=quo;
+                }
+            }
+           document.write("<br><br>");
+        }
+        factor(13195);
+        factor(600851475143);
+        // document.write("<br><br> array is "+ar);
+        ar.reverse();
+        // document.write("<br><br> Reverse array is "+ar);
+        document.write("<br><br><h1> Largest Prime factor is:</h1> "+ar[0]);
+    </script>
+</body>
+</html>

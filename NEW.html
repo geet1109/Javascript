@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // example of dynamically typed language
+        let a = 89
+        console.log(a, typeof (a))
+
+        a = "taran"
+        console.log(a, typeof (a))
+
+
+        // call by value 
+
+        let name = "chiran"
+        let assign = name
+        console.log(assign = "kia", name)
+
+        // call by reference 
+        let obj = {
+            name: "isha",
+            age: 29
+        }
+
+        let obj2 = obj
+
+        console.log(obj.name = "riya", obj2.name)
+
+        // callback
+
+        function product(a, b) {
+            let pro = a * b;
+            output(pro)
+        }
+
+        function output(x) {
+            console.log("This is a result : " + x)
+            console.log(this)
+        }
+
+        product(45, 89, output)
+
+        obj = {
+            name: "risha",
+            age: "89",
+            func: function () {
+                console.log(this.name)
+            }
+        }
+
+        obj.func();
+
+        // Promise example 
+        a = 89
+        b = 45
+        let data = new Promise((reject, resolve) => {
+            if (b > a) {
+                resolve("Resolved")
+            } else {
+                reject("Rejected")
+            }
+        })
+
+        data.then((result) => {
+            console.log(result)
+        })
+
+        // Iterate over object with for in loop 
+        obj = {
+            name: "riya",
+            age: 67,
+            country: "india"
+        }
+
+
+        // object destructuring 
+        let { age } = obj
+        console.log(age + " : this is age ")
+
+        const original = {
+            name: 'John',
+            age: 30,
+            address: {
+                city: 'New York',
+                country: 'USA'
+            }
+        };
+
+        // Shallow copy using Object.assign
+        const shallowCopy = original
+        // Object.assign({}, original);
+
+        // Modify the nested object in the shallow copy
+        shallowCopy.name = 'San Francisco';
+
+        console.log(original);
+        console.log(shallowCopy);
+
+
+        b = a
+        b = 34
+        // let objj
+        // objj.name="deshat"
+        console.log(a)
+        console.log(b)
+
+        let o = {
+            name: "isha",
+            fun: function () {
+                console.log(this)
+            }
+        }
+        o.fun()
+
+        // closures
+        function og() {
+            var a = 90
+
+            function fun() {
+                console.log(a)
+            }
+
+            fun();
+        }
+        og()
+
+
+        //  for of , in , each 
+        // array is used with all for loops
+
+        for (let a of arr) {
+            console.log(a)
+        }
+
+        arr.forEach((item) => {
+            console.log(item)
+        })
+
+        for (let index in arr) {
+            console.log(arr[index])
+        }
+
+        // object for of , in  
+        // with for of loop but with this initially we ned to convert object "obj" into iterable 
+        for (let a of Object.values(obj)) {
+            console.log(a)
+        }
+
+        for (let a in obj) {
+            console.log(obj[a])
+        }
+
+        Object.keys(obj).forEach((k) => {
+            console.log(obj[k])
+        })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // let x=9;
+        // console.log(x)
+        // x="a"
+        // console.log(x)
+
+        // let x=9;
+        // let a
+        // a=x;
+        // a=3
+        // console.log(x)
+        // console.log(a)
+
+        // let c={fruit: 'apple'}
+        // let d
+        // d=c;
+        // c.fruit='Welcome'
+        // console.log(c)
+        // console.log(d)
+
+
+        // let Person={
+        //     name:'geet',
+        //     location:'delhi'
+        // }
+        // for(let obj in Person){
+        //     console.log(obj)
+        // }
+
+        // console.log(b)
+        // var b=23
+
+        // let my=8;
+        // function myfunc(){
+        //     return my*my;
+        // }
+        // console.log(myfunc())
+
+        function func(num1, num2, callback) {
+            let sum = num1 + num2;
+            display(sum)
+        }
+        function display(sum) {
+            console.log(sum)
+        }
+        func(4, 5, display)
+    </script>
+</body>
+
+</html>
